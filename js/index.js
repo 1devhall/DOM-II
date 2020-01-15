@@ -26,6 +26,18 @@ stopLink.addEventListener("click", (event) => {
   console.log("stopped")
 })
 
+//mousedown
+let changeColor = document.querySelector('.intro h2');
+changeColor.addEventListener("mousedown", () => {
+  changeColor.style.color ="blue"
+})
+
+//mouseup
+let changeColor1 = document.querySelector('.intro p');
+changeColor1.addEventListener("mouseup", () => {
+  changeColor1.style.color ="red"
+})
+
 //click
 
 let changeImg = document.querySelector('img');
@@ -50,9 +62,35 @@ window.addEventListener("resize", () => {
 
 //mouseover 
 
-const large = document.querySelector(".content-section .text-content h2")
+const large = document.querySelector(".content-section .text-content p")
 
-test.addEventListener("mouseover", function() {   
+large.addEventListener("mouseover", function() {   
   
   large.style.fontSize = "4rem";
 })
+
+//keydown
+let changeImgA = document.querySelector(".content-destination img")
+window.addEventListener('keydown', checkKeyPress, false);
+function checkKeyPress(key){
+  if (key.keyCode == "65"){
+    changeImgA.src="img/bus.jpg"
+  }
+}
+
+//keyup
+let changeImgR = document.querySelector(".img-fluid")
+window.addEventListener('keyup', checkKeyPress, false);
+function checkKeyPress2(key){
+  if (key.keyCode == "66"){
+    changeImgR.src="img/travel.jpg"
+  }
+}
+//KeyPress
+let changeImgP = document.querySelector(".content-section .img-content img")
+window.addEventListener('keypress', checkKeyPress, false);
+function checkKeyPress(key){
+  if (key.keyCode == "97"){
+    changeImgP.src="img/abeach.jpg"
+  }
+}
